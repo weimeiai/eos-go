@@ -93,13 +93,13 @@ type ProcessedTransaction struct {
 }
 
 type ActionTraceReceipt struct {
-	Receiver        AccountName                    `json:"receiver"`
-	ActionDigest    string                         `json:"act_digest"`
-	GlobalSequence  Uint64                         `json:"global_sequence"`
-	ReceiveSequence Uint64                         `json:"recv_sequence"`
-	AuthSequence    []TransactionTraceAuthSequence `json:"auth_sequence"` // [["account", sequence], ["account", sequence]]
-	CodeSequence    Uint64                         `json:"code_sequence"`
-	ABISequence     Uint64                         `json:"abi_sequence"`
+	Receiver        AccountName                  `json:"receiver"`
+	ActionDigest    string                       `json:"act_digest"`
+	GlobalSequence  Uint64                       `json:"global_sequence"`
+	ReceiveSequence Uint64                       `json:"recv_sequence"`
+	AuthSequence    TransactionTraceAuthSequence `json:"auth_sequence"` // [["account", sequence], ["account", sequence]]
+	CodeSequence    Uint64                       `json:"code_sequence"`
+	ABISequence     Uint64                       `json:"abi_sequence"`
 }
 
 type ActionTrace struct {
