@@ -642,7 +642,7 @@ func (t JSONTime) MarshalJSON() ([]byte, error) {
 }
 
 func (t *JSONTime) UnmarshalJSON(data []byte) (err error) {
-	if string(data) == "null" {
+	if string(data) == "null" || string(data) == "" {
 		return nil
 	}
 
